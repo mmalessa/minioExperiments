@@ -1,0 +1,6 @@
+services:
+    App\UI\Command\:
+        resource: '%kernel.project_dir%/src/UI/Command/*'
+        autoconfigure: true
+        tags:
+            - { name: console.command }

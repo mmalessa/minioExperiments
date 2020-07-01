@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+    application:
+        image: myminio-application:latest
+        container_name: myminio-application
+        build:
+            context: context/application
+        volumes:
+            - ../:/application
+            - ./config/application/.bashrc:/home/developer/.bashrc
+            - ./config/application/php-ini-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+        working_dir: /application
+        command: ['tail', '-f', '/dev/null']
+        networks:
+            myminio:
+                aliases:
+                    - application
+
+    minio-db:
+        image: minio/minio
+        container_name: myminio-db
+        ports:
+            - 9000:9000
+        volumes:
+            - minio_data:/data
+        command: ['server', '/data']
+        networks:
+            myminio:
+                aliases:
+                    - minio
+
+networks:
+    myminio:
+
+volumes:
+    minio_data:

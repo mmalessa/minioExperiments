@@ -1,0 +1,20 @@
+{
+  "buses": [
+    { "id": "BUS1", "name": "BUS 1", "costPerKilometer": 12, "driverId" : 1},
+    { "id": "BUS2", "name": "BUS 2", "costPerKilometer": 8, "driverId" : 2 },
+    { "id": "BUS3", "name": "BUS 3", "costPerKilometer": 19, "driverId" : 3 },
+    { "id": "BUS4", "name": "BUS 4", "costPerKilometer": 6, "driverId" : 4 },
+    { "id": "BUS5", "name": "BUS 5", "costPerKilometer": 22, "driverId" : 5 },
+    { "id": "BUS6", "name": "BUS 6", "costPerKilometer": 13, "driverId" : 4 },
+    { "id": "BUS7", "name": "BUS 7", "costPerKilometer": 9, "driverId" : 3 },
+    { "id": "BUS8", "name": "BUS 8", "costPerKilometer": 15, "driverId" : 2 },
+    { "id": "BUS9", "name": "BUS 9", "costPerKilometer": 20, "driverId" : 1 }
+  ],
+  "drivers": [
+    { "id": 1, "name": "Lucas Bower"},
+    { "id": 2, "name": "Nicholas Lyman"},
+    { "id": 3, "name": "Joe Wright"},
+    { "id": 4, "name": "Joseph McLean"},
+    { "id": 5, "name": "Matt Ogden"}
+  ]
+}
